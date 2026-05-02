@@ -33,6 +33,25 @@ export default function Scoring({ goTo }) {
   const [intervalActive, setIntervalActive] = useState(false);
   const intervalStartedRef = useRef(-1);
 
+  // --- 左右反転（コート方向に合わせて表示） ---
+  const [swapped, setSwapped] = useState(() => {
+    try {
+      return localStorage.getItem('badminton_panel_swapped') === '1';
+    } catch (_) {
+      return false;
+    }
+  });
+
+  function toggleSwap() {
+    setSwapped((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('badminton_panel_swapped', next ? '1' : '0');
+      } catch (_) {}
+      return next;
+    });
+  }
+
   // ゲーム間インターバルタイマー
   useEffect(() => {
     if (!intervalActive || intervalSeconds <= 0) return;
@@ -357,7 +376,7 @@ export default function Scoring({ goTo }) {
       )}
 
       {/* メインスコアエリア */}
-      <div className="score-area">
+      <div className={`score-area ${swapped ? 'swapped' : ''}`}>
         {/* チームA */}
         <button
           className={`score-panel panel-a ${server === 'A' ? 'serving' : ''} ${lastPointFlash === 'A' ? 'flash' : ''}`}
@@ -444,6 +463,13 @@ export default function Scoring({ goTo }) {
         </button>
         <button className="sub-action-btn" onClick={() => setShowLetConfirm(true)}>
           🔄 レット
+        </button>
+        <button
+          className={`sub-action-btn ${swapped ? 'sub-action-btn-active' : ''}`}
+          onClick={toggleSwap}
+          aria-label="左右反転"
+        >
+          ⇄ 左右反転
         </button>
       </div>
 

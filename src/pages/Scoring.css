@@ -61,6 +61,10 @@
   min-height: 0;
 }
 
+.score-area.swapped {
+  flex-direction: row-reverse;
+}
+
 .score-panel {
   flex: 1;
   display: flex;
@@ -296,6 +300,12 @@
 
 .sub-action-btn:active {
   background: rgba(255,255,255,0.2);
+}
+
+.sub-action-btn-active {
+  background: rgba(93, 187, 255, 0.25);
+  border-color: rgba(93, 187, 255, 0.6);
+  color: #fff;
 }
 
 /* ============================================================

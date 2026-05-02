@@ -59,7 +59,7 @@ rally {
   nextServer, nextServerPlayer, isServiceBreak
 }
 ```
-- `localStorage`キー名 `badminton_history` / `badminton_settings` / `badminton_install_dismissed_until` は変更禁止
+- `localStorage`キー名 `badminton_history` / `badminton_settings` / `badminton_install_dismissed_until` / `badminton_panel_swapped` は変更禁止
 
 ## MatchContext アクション一覧
 | アクション | 説明 |
