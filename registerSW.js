@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/badminton-score-app/sw.js', { scope: '/badminton-score-app/' })})}
