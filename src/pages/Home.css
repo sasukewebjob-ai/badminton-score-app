@@ -1,0 +1,108 @@
+.home-page {
+  background: linear-gradient(160deg, #1a3a5c 0%, #2e6fa3 60%, #f0f4f8 60%);
+}
+
+.home-hero {
+  padding: 48px 24px 32px;
+  text-align: center;
+  color: #fff;
+}
+
+.home-shuttlecock {
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.home-title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.home-sub {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.home-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-ongoing-card {
+  border: 2px solid #2e6fa3;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-ongoing-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2e6fa3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.home-ongoing-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-ongoing-teams {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+
+.home-ongoing-type {
+  background: #1a3a5c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-btn-new,
+.home-btn-history,
+.home-btn-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.home-btn-icon {
+  font-size: 20px;
+}
+
+.home-howto {
+  margin-top: 4px;
+}
+
+.home-howto-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 2;
+  color: #444;
+}

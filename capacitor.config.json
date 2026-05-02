@@ -1,0 +1,13 @@
+{
+  "appId": "com.yourname.badmintonscore",
+  "appName": "バドミントンスコアシート",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true
+  },
+  "plugins": {
+    "EdgeToEdge": {
+      "backgroundColor": "#0d2137"
+    }
+  }
+}

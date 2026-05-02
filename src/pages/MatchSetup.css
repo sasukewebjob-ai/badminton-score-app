@@ -1,0 +1,225 @@
+.setup-page {
+  background: #f0f4f8;
+}
+
+.setup-content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+/* ステップインジケーター */
+.setup-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 4px 0 8px;
+}
+
+.setup-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #d0dce8;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.setup-step.active .step-num {
+  background: #1a3a5c;
+  color: #fff;
+}
+
+.setup-step.done .step-num {
+  background: #27ae60;
+  color: #fff;
+}
+
+.step-label {
+  font-size: 11px;
+  color: #888;
+  font-weight: 600;
+}
+
+.setup-step.active .step-label {
+  color: #1a3a5c;
+}
+
+.setup-step-line {
+  width: 60px;
+  height: 2px;
+  background: #d0dce8;
+  margin: 0 4px;
+  margin-bottom: 16px;
+}
+
+/* フォーム */
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* チームカード */
+.setup-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.setup-team-card {
+  border-top: 4px solid transparent;
+}
+
+.team-a-card {
+  border-top-color: #1a3a5c;
+}
+
+.team-b-card {
+  border-top-color: #c0392b;
+}
+
+.setup-vs {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #aaa;
+  padding: 2px 0;
+}
+
+/* コイントス */
+.toss-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.toss-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.toss-desc {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.toss-teams {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.toss-btn {
+  border: 2.5px solid #d0dce8;
+  border-radius: 12px;
+  padding: 16px 12px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s;
+  position: relative;
+}
+
+.toss-btn-a.selected {
+  border-color: #1a3a5c;
+  background: #e8f0fa;
+}
+
+.toss-btn-b.selected {
+  border-color: #c0392b;
+  background: #faeae8;
+}
+
+.toss-team-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.toss-team-sub {
+  font-size: 11px;
+  color: #888;
+}
+
+.toss-player-name {
+  font-size: 13px;
+  color: #555;
+}
+
+.toss-badge {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+  border: 1.5px solid #d0dce8;
+  border-radius: 20px;
+  padding: 2px 10px;
+  transition: all 0.15s;
+}
+
+.toss-btn-a.selected .toss-badge {
+  background: #1a3a5c;
+  color: #fff;
+  border-color: #1a3a5c;
+}
+
+.toss-btn-b.selected .toss-badge {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+/* S/R選手選択 */
+.serve-select-section {
+  margin-bottom: 4px;
+}
+
+.serve-select-label {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.serve-label-s {
+  background: #e8f0fa;
+  color: #1a3a5c;
+  border-left: 4px solid #1a3a5c;
+}
+
+.serve-label-r {
+  background: #faeae8;
+  color: #c0392b;
+  border-left: 4px solid #c0392b;
+}

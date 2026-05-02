@@ -1,0 +1,501 @@
+.sheet-page {
+  background: #f0f4f8;
+}
+
+/* エクスポートバー */
+.sheet-export-bar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e0e8f0;
+  flex-shrink: 0;
+}
+
+.export-btn {
+  flex: 1;
+  padding: 10px;
+  background: #1a3a5c;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.export-btn:active {
+  background: #142d47;
+}
+
+.export-btn:disabled {
+  opacity: 0.5;
+}
+
+.export-btn-edit-active {
+  background: #e67e22 !important;
+}
+
+/* メインエリア（スコア表 + サイドパネル） */
+.sheet-main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* スクロールエリア */
+.sheet-scroll {
+  flex: 1;
+  overflow: auto;
+  padding: 8px;
+}
+
+/* サイドボタンパネル */
+.sheet-side-panel {
+  width: 68px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 6px;
+  background: #f0f4f8;
+  border-left: 1px solid #d0dce8;
+}
+
+.side-btn {
+  padding: 10px 4px;
+  background: #1a3a5c;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.4;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.side-btn:active {
+  opacity: 0.8;
+}
+
+.side-btn-active {
+  background: #e67e22 !important;
+}
+
+.side-btn-save {
+  background: #27ae60 !important;
+}
+
+.side-btn-saved {
+  background: #888 !important;
+}
+
+/* ============================================================
+   スコアシート紙面
+   ============================================================ */
+
+.sheet-paper {
+  background: #fff;
+  border: 1px solid #c0c8d4;
+  border-radius: 4px;
+  padding: 16px;
+  min-width: 320px;
+  font-size: 12px;
+}
+
+/* タイトル */
+.sheet-title-row {
+  text-align: center;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #1a3a5c;
+  padding-bottom: 8px;
+}
+
+.sheet-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+  color: #1a3a5c;
+  letter-spacing: 2px;
+}
+
+/* コンパクト版タイトル */
+.sheet-title-row-compact {
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+}
+
+.sheet-title-compact {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* ヘッダー */
+.sheet-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #c0c8d4;
+}
+
+.sheet-header-left,
+.sheet-header-right {
+  flex: 0 0 180px;
+  font-size: 12px;
+}
+
+/* コンパクトヘッダー */
+.sheet-header-compact {
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+}
+
+.sheet-header-compact .sheet-header-left,
+.sheet-header-compact .sheet-header-right {
+  flex: 0 0 130px;
+  font-size: 10px;
+}
+
+.sheet-header-compact .sheet-info-label {
+  font-size: 9px;
+  min-width: 55px;
+}
+
+.sheet-header-compact .sheet-info-value {
+  font-size: 10px;
+}
+
+.sheet-header-compact .sheet-team-label {
+  font-size: 11px;
+}
+
+.sheet-header-compact .sheet-team-player {
+  font-size: 10px;
+}
+
+.sheet-header-compact .sheet-game-score {
+  font-size: 12px;
+}
+
+.sheet-header-compact .sheet-wins-total {
+  font-size: 14px;
+}
+
+.sheet-header-compact .sheet-matchup {
+  padding: 8px;
+}
+
+.sheet-info-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 5px;
+  border-bottom: 1px dotted #d0d8e4;
+  padding-bottom: 3px;
+}
+
+.sheet-info-label {
+  font-size: 11px;
+  color: #666;
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.sheet-info-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+/* 対戦カード中央 */
+.sheet-matchup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1.5px solid #1a3a5c;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.sheet-team-box {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.team-box-a {
+  border-left: 3px solid #1a3a5c;
+}
+
+.team-box-b {
+  border-right: 3px solid #c0392b;
+}
+
+.sheet-team-label {
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #1a3a5c;
+}
+
+.sheet-team-player {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.sheet-score-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 80px;
+}
+
+.sheet-game-score {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #5b9bd5;
+}
+
+.score-colon {
+  color: #888;
+}
+
+.score-win {
+  color: #1a3a5c;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.sheet-wins-total {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #5b9bd5;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1.5px solid #d0d8e4;
+}
+
+/* ============================================================
+   全ゲーム統合横スクロール表
+   ============================================================ */
+
+.unified-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.unified-table {
+  border-collapse: collapse;
+  min-width: max-content;
+}
+
+.unified-name-header {
+  background: #1a3a5c;
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 8px;
+  text-align: left;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  min-width: 150px;
+  white-space: nowrap;
+}
+
+.unified-game-header {
+  background: #1a3a5c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 8px;
+  text-align: center;
+  border-left: 2px solid #2a5a8c;
+}
+
+.game-header-sep {
+  border-right: 3px solid #e67e22;
+}
+
+.unified-game-result {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.unified-name-cell {
+  min-width: 150px;
+  max-width: 180px;
+  padding: 5px 8px;
+  border-right: 2px solid #1a3a5c;
+  border-bottom: 1px solid #c0c8d4;
+  position: sticky;
+  left: 0;
+  background: inherit;
+  z-index: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.06);
+}
+
+.gb-row-a .unified-name-cell { background: #f8faff; }
+.gb-row-b .unified-name-cell { background: #fff8f8; }
+
+/* ゲーム区切りセル */
+.cell-game-sep {
+  border-right: 3px solid #e67e22 !important;
+}
+
+/* 選手行 */
+.gb-row-a {
+  background: #f8faff;
+}
+
+.gb-row-b {
+  background: #fff8f8;
+}
+
+/* 選手名セル（左に固定） */
+.gb-name-cell {
+  min-width: 160px;
+  max-width: 180px;
+  padding: 5px 8px;
+  border-right: 2px solid #1a3a5c;
+  border-bottom: 1px solid #c0c8d4;
+  position: sticky;
+  left: 0;
+  background: inherit;
+  z-index: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.06);
+}
+
+.gb-row-a .gb-name-cell { background: #f8faff; }
+.gb-row-b .gb-name-cell { background: #fff8f8; }
+
+.gb-player-name {
+  font-size: 12px;
+  font-weight: 700;
+  display: inline;
+}
+
+.gb-team-name {
+  font-size: 10px;
+  color: #888;
+  margin-left: 3px;
+}
+
+.gb-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.gb-badge-s {
+  background: #1a3a5c;
+  color: #fff;
+}
+
+.gb-badge-r {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* スコアセル */
+.sheet-cell {
+  width: 26px;
+  min-width: 26px;
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 11px;
+  font-weight: 600;
+  border-right: 1px solid #e0e8f0;
+  border-bottom: 1px solid #c0c8d4;
+  position: relative;
+  padding: 0;
+}
+
+.sheet-cell.cell-empty {
+  background: transparent;
+}
+
+.sheet-cell.cell-editable {
+  background: #fffbe6;
+  border-right-color: #f0c040;
+}
+
+.sheet-cell.cell-init {
+  background: #f0f4f8;
+  color: #666;
+}
+
+.sheet-cell.cell-so {
+  background: #fff9e6;
+  color: #e67e22;
+}
+
+.sheet-cell.cell-winner {
+  background: #eafaf0;
+}
+
+.so-mark {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 8px;
+  color: #e67e22;
+}
+
+.winner-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1a8a1a;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  color: #1a8a1a;
+}
+
+.cell-edit-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  padding: 0;
+  -moz-appearance: textfield;
+}
+
+.cell-edit-input::-webkit-outer-spin-button,
+.cell-edit-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,199 @@
+.history-page {
+  background: #f0f4f8;
+}
+
+.history-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* 空状態 */
+.history-empty {
+  text-align: center;
+  padding: 60px 24px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.history-empty-icon {
+  font-size: 48px;
+}
+
+.history-empty p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* リスト */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* カード */
+.history-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-type {
+  background: #1a3a5c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.history-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.history-number {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.history-delete-btn {
+  background: none;
+  color: #aaa;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.history-delete-btn:active {
+  background: #fde8e8;
+  color: #c0392b;
+}
+
+/* 対戦情報 */
+.history-matchup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history-team {
+  flex: 1;
+}
+
+.history-team-right {
+  text-align: right;
+}
+
+.history-team.team-winner .history-team-name {
+  color: #1a3a5c;
+}
+
+.history-team-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.history-player {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* スコア */
+.history-scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 70px;
+}
+
+.history-game-wins {
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.wins-highlight {
+  color: #1a3a5c;
+}
+
+.wins-sep {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.history-game-score {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  gap: 3px;
+}
+
+.history-game-score .score-bold {
+  font-weight: 700;
+  color: #333;
+}
+
+/* ビューボタン */
+.history-view-btn {
+  width: 100%;
+}
+
+/* モーダル（共通） */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+}
+
+.modal-card {
+  background: #fff;
+  color: #1a1a1a;
+  max-width: 320px;
+  width: 100%;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.modal-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px;
+}
+
+.modal-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

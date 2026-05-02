@@ -1,0 +1,29 @@
+{
+  "name": "badminton-score-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:pages": "vite build --mode pages",
+    "preview": "vite preview",
+    "deploy": "npm run build:pages && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.2.0",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite-plugin-pwa": "^1.2.0",
+    "workbox-window": "^7.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "gh-pages": "^6.3.0",
+    "jimp": "^1.6.0",
+    "vite": "^4.4.0"
+  }
+}
