@@ -37,8 +37,8 @@ export default function MatchSetup({ goTo }) {
   }
 
   function goToServe() {
-    if (!form.teamAName || !form.teamAPlayer1 || !form.teamBName || !form.teamBPlayer1) {
-      alert('チーム名と選手名（選手1）を入力してください');
+    if (!form.teamAPlayer1 || !form.teamBPlayer1) {
+      alert('選手名（選手1）を入力してください');
       return;
     }
     if (doubles && (!form.teamAPlayer2 || !form.teamBPlayer2)) {
@@ -71,12 +71,12 @@ export default function MatchSetup({ goTo }) {
       referee: form.referee,
       serviceJudge: form.serviceJudge,
       teamA: {
-        name: form.teamAName,
+        name: form.teamAName.trim() || 'チームA',
         player1: form.teamAPlayer1,
         player2: form.teamAPlayer2,
       },
       teamB: {
-        name: form.teamBName,
+        name: form.teamBName.trim() || 'チームB',
         player1: form.teamBPlayer1,
         player2: form.teamBPlayer2,
       },
@@ -166,8 +166,8 @@ export default function MatchSetup({ goTo }) {
               <div className="card setup-team-card team-a-card">
                 <p className="section-header">チームA（左側）</p>
                 <div className="form-group">
-                  <label className="form-label">チーム名 / 所属</label>
-                  <input className="form-input" value={form.teamAName} onChange={e => set('teamAName', e.target.value)} placeholder="例: 東京都" />
+                  <label className="form-label">チーム名 / 所属 <span className="form-label-optional">（任意）</span></label>
+                  <input className="form-input" value={form.teamAName} onChange={e => set('teamAName', e.target.value)} placeholder="未記入なら「チームA」になります" />
                 </div>
                 <div className="form-group">
                   <label className="form-label">選手1{doubles ? '（上段）' : ''}</label>
@@ -187,8 +187,8 @@ export default function MatchSetup({ goTo }) {
               <div className="card setup-team-card team-b-card">
                 <p className="section-header">チームB（右側）</p>
                 <div className="form-group">
-                  <label className="form-label">チーム名 / 所属</label>
-                  <input className="form-input" value={form.teamBName} onChange={e => set('teamBName', e.target.value)} placeholder="例: 愛媛県" />
+                  <label className="form-label">チーム名 / 所属 <span className="form-label-optional">（任意）</span></label>
+                  <input className="form-input" value={form.teamBName} onChange={e => set('teamBName', e.target.value)} placeholder="未記入なら「チームB」になります" />
                 </div>
                 <div className="form-group">
                   <label className="form-label">選手1{doubles ? '（上段）' : ''}</label>
