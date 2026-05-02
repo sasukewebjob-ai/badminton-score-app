@@ -219,6 +219,30 @@ export function getServiceCourt(serverScore) {
   return serverScore % 2 === 0 ? 'right' : 'left';
 }
 
+// 現在のレシーバー選手を返す（ダブルス用）
+// シングルスは相手チームの唯一の選手なので呼び出し側で判定
+// 戻り値: 'A1' | 'A2' | 'B1' | 'B2' | null
+export function getReceiverPlayer(game) {
+  if (!game) return null;
+  const { server, scoreA, scoreB, aRightCourt, bRightCourt } = game;
+  if (!server) return null;
+
+  const serverScore = server === 'A' ? scoreA : scoreB;
+  const serviceCourt = getServiceCourt(serverScore); // サーバー側のコート
+
+  // レシーバーはサーバーと同じ側のコートに立つ相手チームの選手
+  const receivingTeam = server === 'A' ? 'B' : 'A';
+  const receivingTeamRight = receivingTeam === 'A' ? aRightCourt : bRightCourt;
+  if (!receivingTeamRight) return null;
+
+  const receivingTeamLeft =
+    receivingTeamRight === `${receivingTeam}1`
+      ? `${receivingTeam}2`
+      : `${receivingTeam}1`;
+
+  return serviceCourt === 'right' ? receivingTeamRight : receivingTeamLeft;
+}
+
 // ゲームポイント / マッチポイント チェック
 // settings: { gameTarget, deuceEnabled }
 export function getPointStatus(scoreA, scoreB, gamesWonA, gamesWonB, settings = {}) {

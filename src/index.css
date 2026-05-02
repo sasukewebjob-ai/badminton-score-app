@@ -151,6 +151,13 @@ input, select {
   margin-bottom: 5px;
 }
 
+.form-label-optional {
+  font-size: 11px;
+  font-weight: 500;
+  color: #999;
+  margin-left: 2px;
+}
+
 .form-input {
   width: 100%;
   padding: 11px 12px;

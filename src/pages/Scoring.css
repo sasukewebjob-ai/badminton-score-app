@@ -145,9 +145,26 @@
   border: 1px solid rgba(93, 187, 255, 0.5);
 }
 
+.panel-player.receiving-player {
+  color: #fff;
+  font-weight: 700;
+  background: rgba(255, 209, 102, 0.18);
+  border: 1px solid rgba(255, 209, 102, 0.45);
+}
+
+.panel-player.serving-player.receiving-player {
+  background: rgba(93, 187, 255, 0.25);
+  border: 1px solid rgba(93, 187, 255, 0.5);
+}
+
 .serve-mark {
   font-size: 20px;
   animation: bounce 0.5s ease infinite alternate;
+}
+
+.receive-mark {
+  font-size: 17px;
+  filter: drop-shadow(0 0 2px rgba(255, 209, 102, 0.6));
 }
 
 @keyframes bounce {

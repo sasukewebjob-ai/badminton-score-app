@@ -151,12 +151,12 @@ export default function MatchSetup({ goTo }) {
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label className="form-label">主審</label>
-                  <input className="form-input" value={form.referee} onChange={e => set('referee', e.target.value)} placeholder="氏名" />
+                  <label className="form-label">主審 <span className="form-label-optional">（任意）</span></label>
+                  <input className="form-input" value={form.referee} onChange={e => set('referee', e.target.value)} placeholder="未記入のままでも開始できます" />
                 </div>
                 <div className="form-group">
-                  <label className="form-label">サービスジャッジ</label>
-                  <input className="form-input" value={form.serviceJudge} onChange={e => set('serviceJudge', e.target.value)} placeholder="氏名" />
+                  <label className="form-label">サービスジャッジ <span className="form-label-optional">（任意）</span></label>
+                  <input className="form-input" value={form.serviceJudge} onChange={e => set('serviceJudge', e.target.value)} placeholder="未記入のままでも開始できます" />
                 </div>
               </div>
             </div>

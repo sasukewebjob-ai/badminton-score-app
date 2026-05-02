@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useMatch } from '../context/MatchContext';
 import { useSettings } from '../context/SettingsContext';
-import { isDoubles, getGameWins, getPointStatus, getServiceCourt } from '../utils/badmintonLogic';
+import { isDoubles, getGameWins, getPointStatus, getServiceCourt, getReceiverPlayer } from '../utils/badmintonLogic';
 import { useWakeLock } from '../utils/useWakeLock';
 import './Scoring.css';
 
@@ -329,6 +329,7 @@ export default function Scoring({ goTo }) {
   const serverTeamName = server === 'A' ? matchInfo.teamA.name : matchInfo.teamB.name;
   const serviceCourt = getServiceCourt(serverScore);
   const serviceCourtLabel = serviceCourt === 'right' ? '右' : '左';
+  const receiverPlayer = doubles ? getReceiverPlayer(currentGame) : null;
 
   const canUndo = !(currentGame.rallies.length === 0 && currentGameIndex === 0);
 
@@ -365,14 +366,16 @@ export default function Scoring({ goTo }) {
           <div className="panel-team-info">
             <div className="panel-team-name">{matchInfo.teamA.name}</div>
             <div className="panel-players">
-              <div className={`panel-player ${doubles && serverPlayer === 'A1' && server === 'A' ? 'serving-player' : ''}`}>
+              <div className={`panel-player ${doubles && serverPlayer === 'A1' && server === 'A' ? 'serving-player' : ''} ${doubles && receiverPlayer === 'A1' ? 'receiving-player' : ''}`}>
                 {matchInfo.teamA.player1}
                 {doubles && serverPlayer === 'A1' && server === 'A' && <span className="serve-mark">🏸</span>}
+                {doubles && receiverPlayer === 'A1' && <span className="receive-mark">🛡️</span>}
               </div>
               {doubles && (
-                <div className={`panel-player ${serverPlayer === 'A2' && server === 'A' ? 'serving-player' : ''}`}>
+                <div className={`panel-player ${serverPlayer === 'A2' && server === 'A' ? 'serving-player' : ''} ${receiverPlayer === 'A2' ? 'receiving-player' : ''}`}>
                   {matchInfo.teamA.player2}
                   {serverPlayer === 'A2' && server === 'A' && <span className="serve-mark">🏸</span>}
+                  {receiverPlayer === 'A2' && <span className="receive-mark">🛡️</span>}
                 </div>
               )}
             </div>
@@ -410,14 +413,16 @@ export default function Scoring({ goTo }) {
           <div className="panel-team-info panel-team-info-right">
             <div className="panel-team-name">{matchInfo.teamB.name}</div>
             <div className="panel-players">
-              <div className={`panel-player ${doubles && serverPlayer === 'B1' && server === 'B' ? 'serving-player' : ''}`}>
+              <div className={`panel-player ${doubles && serverPlayer === 'B1' && server === 'B' ? 'serving-player' : ''} ${doubles && receiverPlayer === 'B1' ? 'receiving-player' : ''}`}>
                 {matchInfo.teamB.player1}
                 {doubles && serverPlayer === 'B1' && server === 'B' && <span className="serve-mark">🏸</span>}
+                {doubles && receiverPlayer === 'B1' && <span className="receive-mark">🛡️</span>}
               </div>
               {doubles && (
-                <div className={`panel-player ${serverPlayer === 'B2' && server === 'B' ? 'serving-player' : ''}`}>
+                <div className={`panel-player ${serverPlayer === 'B2' && server === 'B' ? 'serving-player' : ''} ${receiverPlayer === 'B2' ? 'receiving-player' : ''}`}>
                   {matchInfo.teamB.player2}
                   {serverPlayer === 'B2' && server === 'B' && <span className="serve-mark">🏸</span>}
+                  {receiverPlayer === 'B2' && <span className="receive-mark">🛡️</span>}
                 </div>
               )}
             </div>
